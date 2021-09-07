@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-09-07 09:56:21
- * @LastEditTime: 2021-09-07 10:44:30
+ * @LastEditTime: 2021-09-07 13:17:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/src/index.js
@@ -60,7 +60,8 @@ class Board extends React.Component {
         if (winner) {
             status = 'Winner: ' + winner;
         } else {
-            status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+
+            status = 'Next player: ' + this.state.xIsNext ? 'X' : 'O';
         }
         return (
             <div>
