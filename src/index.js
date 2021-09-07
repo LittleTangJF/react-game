@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-09-07 09:56:21
- * @LastEditTime: 2021-09-07 10:29:13
+ * @LastEditTime: 2021-09-07 10:44:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/src/index.js
@@ -84,6 +84,22 @@ class Board extends React.Component {
         );
     }
 }
+class Game extends React.Component {
+    render() {
+        return (
+            <div className="game">
+                <div className="game-board">
+                    <Board />
+                </div>
+                <div className="game-info">
+                    <div>{/* status */}</div>
+                    <ol>{/* TODO */}</ol>
+                </div>
+            </div>
+        );
+    }
+}
+
 function calculateWinner(squares) {
     const lines = [
         [0, 1, 2],
@@ -103,22 +119,6 @@ function calculateWinner(squares) {
     }
     return null;
 }
-class Game extends React.Component {
-    render() {
-        return (
-            <div className="game">
-                <div className="game-board">
-                    <Board />
-                </div>
-                <div className="game-info">
-                    <div>{/* status */}</div>
-                    <ol>{/* TODO */}</ol>
-                </div>
-            </div>
-        );
-    }
-}
-
 // ========================================
 
 ReactDOM.render(
